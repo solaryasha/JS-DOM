@@ -58,8 +58,8 @@ function gameTemplate (database,element)  {
 }
 tabs.addEventListener("click", contentGenerator);
 
-function contentGenerator (event) {
-    let buttonText = event.target.textContent;
+function contentGenerator ({target}) {
+    let buttonText = target.textContent;
     database.forEach(gameItem =>{
         if(gameItem.header === buttonText){ 
             gameTemplate(gameItem,info);
